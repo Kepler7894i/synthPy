@@ -608,7 +608,7 @@ class Refractometry(Diagnostic):
 
     def refractogram(self, bin_scale = 1, pix_x = 3448, pix_y = 2574, clear_mem = False):
         """
-        Generates a refractogram by histogramming the accumulated rays.
+        Generates a refractogram by binning the accumulated rays into a histogram.
         
         :param bin_scale: Scaling factor for histogram bins
         :type bin_scale: int, default: 1

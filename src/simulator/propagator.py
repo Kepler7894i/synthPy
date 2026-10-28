@@ -428,13 +428,14 @@ def dsdt(t, s, parallelise, inv_brems, phaseshift, B_on, ne, B, Te, Z, x, y, z, 
         print("B_on")
         """
         Returns the VerdetConst ne B.v
+        Where: VerdetConst = 2.62e-13 * lwl ** 2 (the faraday rotation const.)
 
         Args:
             x (3xN float): N [x,y,z] locations
             v (3xN float): N [vx,vy,vz] velocities
 
         Returns:
-            N float: N values of ne B.v
+            N float: N values of VerdetConst * ne * B.v
         """
 
         ne_N = trilinearInterpolator((x, y, z), ne, r)
